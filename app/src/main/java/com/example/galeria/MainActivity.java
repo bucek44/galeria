@@ -55,6 +55,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
     );
+        buttonWstecz.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (aktualneZdjecie == 0){
+                            aktualneZdjecie = zdjeciaId.size()+1;
+                        }else {
+                            aktualneZdjecie ++;
+                        }
+                        imageView.setImageResource(zdjeciaId.get(aktualneZdjecie));
+                    }
+                }
 }
     private void dodajZdiecia(){
         zdjeciaId.add(R.drawable.listek);
